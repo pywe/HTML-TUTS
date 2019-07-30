@@ -10,7 +10,7 @@ Responsivesness, courtesy, JavaScript has also been already added.
 ### HOW TO USE
 Just clone this repo, git clone https://github.com/pywe/HTML-TUTS.git and open the various files in a browser.
 
-###AVAILABLE EXAMPLES
+### AVAILABLE EXAMPLES
 
 alert.html
 auto_writing.html
