@@ -52,10 +52,10 @@ body {
   color: #999;
 }
 .right{
-  float: right; 
+  float: right;
 }
 .left{
-  float: left; 
+  float: left;
 }
 p{
   font-size: 12px;
@@ -191,11 +191,11 @@ const http = new XMLHttpRequest();
                     }
                 // var avatar = "w3images/avatar_g2.jpg"
                 msgbox.innerHTML += constmsg(msg,time,user);
-                ids.push(msg_id);   
+                ids.push(msg_id);
                 window.scrollTo(0,document.querySelector("#chatbox").scrollHeight);
                   }
           }
-          
+
       }
     }
   }
@@ -203,7 +203,7 @@ const http = new XMLHttpRequest();
 function sendNewMsg(msg,t_user,o_user){
 // Adding message to the box
 var d = new Date(); // for now
-// d.getSeconds(); 
+// d.getSeconds();
 
   var pos = "time-right";
   var color = "container"
@@ -269,7 +269,7 @@ const http = new XMLHttpRequest();
             }
 
 function message(){
-                
+
                 var state = false;
                 var url = "https://www.pywe.org/messageapi/Message/?username=Ellie&api_key=faa66b4640ed7482fc21007016db22174fe6d26dd0a0af33d7761af49a5b"
                 // console.log("called signUp function...")
@@ -287,7 +287,7 @@ function message(){
             // console.log(json_resp)
             // You can now use the response for what you want
 
-            
+
             msgs = json_resp['objects']
             console.log(msgs)
             if (msgs.length > 0){
@@ -298,7 +298,7 @@ function message(){
                 var username = msgs[i]['from_user']
                 if (username === thisuser['username']){
                   var user = thisuser;
-                }c
+                }
                 else{
                   var user = otheruser;
                 }
@@ -311,7 +311,7 @@ function message(){
               window.scrollTo(0,document.querySelector("#chatbox").scrollHeight);
               setInterval(receiveNewMsg,2000);
             }
-        }     
+        }
 </script>
 </body>
 </html>
