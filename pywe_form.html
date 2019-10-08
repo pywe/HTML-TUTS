@@ -220,12 +220,12 @@ img{
 <button class="mybtn active animated pulse" id="registerbtn">Register</button>
 <button class="mybtn" id="loginbtn">Login</button>
 </div>
-<form action="#" style="max-width:500px;margin:auto" id="signupForm">
+<form action="https://www.pywe.org/accounts/signup/" method="POST" style="max-width:500px;margin:auto" id="signupForm">
   <h2 class="animated jello">Register Here</h2>
   <img src="https://www.pywe.org/static/images/logo.png" />
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+    <input class="input-field" type="text" placeholder="Username" name="username">
   </div>
 
   <div class="input-container">
@@ -235,7 +235,11 @@ img{
   
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" placeholder="Password" name="psw">
+    <input class="input-field" type="password" placeholder="Password" name="password">
+  </div>
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Confirm Password" name="password1">
   </div>
 
   <button type="submit" class="btn">Register</button>
@@ -243,25 +247,25 @@ img{
 </form>
 
 
-<form action="#" style="max-width:500px;margin:auto;display:none;" id="loginForm">
+<form action="https://www.pywe.org/accounts/login/" method="POST" style="max-width:500px;margin:auto;display:none;" id="loginForm">
   <h2 class="animated jello">Login</h2>
   <img src="https://www.pywe.org/static/images/logo.png" />
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+    <input class="input-field" type="text" placeholder="Username" name="username">
   </div>
 
   
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" placeholder="Password" name="psw">
+    <input class="input-field" type="password" placeholder="Password" name="password">
   </div>
 
   <button type="submit" class="btn">Login</button>
   <div id="attach" style="max-width:100%;margin:auto"></div>
 </form>
 <div class="footer">
-  <p>2019 PywE</p>
+  <p>© 2019 Copyright <a href="https://www.pywe.org">PywE</a> -- All rights reserved</p>
 </div>
 <!-- You can put this script in a file and call it here -->
 <!-- When putting in a file do not include the <script></script> tags -->
