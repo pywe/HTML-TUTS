@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.pywe.org/static/css/animate.css">
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+background-image: url(2.png);
+background-repeat: no-repeat;
+background-position-y: bottom center;
+background-position-x: right;
+}
+* {box-sizing: border-box;}
+::placeholder {
+  color: #a915c6;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #a915c6;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #a915c6;
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  /* outline:#a915c6; */
+}
+
+.icon {
+  padding: 10px;
+  background: #a915c6;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid #a915c6;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #a915c6;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  outline:none;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.mybtn {
+  background-color: #a915c6;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  outline:none;
+}
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+.mybtn,.active{
+  width: 20%;
+}
+
+}
+
+/*
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+.mybtn,.active{
+ width:20%;
+}
+
+}
+
+/*
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+.mybtn,.active{
+  width: 20%;
+}
+
+}
+
+/*
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+.mybtn,.active{
+  width: 20%;
+}
+
+}
+
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+.mybtn,.active{
+  width: 40%;
+}
+
+}
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+.mybtn,.active{
+  width: 40%;
+}
+
+}
+
+.mybtn:hover {
+  opacity: 1;
+}
+#buttons{
+text-align:center;
+}
+.active{
+background-color:gray;
+color: white;
+padding: 15px 20px;
+border: none;
+cursor: pointer;
+opacity: 0.9;
+outline:none;
+}
+form{
+  background-color: white;
+  position:relative;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  top:30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px 15px 0px 0;
+}
+#attach{
+  position:relative;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  top:20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px 15px 0px 0;
+}
+h2{
+  color:#a915c6;
+  float:left;
+}
+img{
+  float:right; 
+  height:50px;
+  width:50px;
+  border-radius: 50%;
+  border:solid 2px #a915c6;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #a915c6;
+   color: white;
+   text-align: center;
+   height:40px;
+}
+.footer p{
+  font-size:12px;
+}
+</style>
+</head>
+<body>
+<div id="buttons">
+<button class="mybtn active animated pulse" id="registerbtn">Register</button>
+<button class="mybtn" id="loginbtn">Login</button>
+</div>
+<form action="#" style="max-width:500px;margin:auto" id="signupForm">
+  <h2 class="animated jello">Register Here</h2>
+  <img src="https://www.pywe.org/static/images/logo.png" />
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="psw">
+  </div>
+
+  <button type="submit" class="btn">Register</button>
+  <div id="attach" style="max-width:100%;margin:auto"></div>
+</form>
+
+
+<form action="#" style="max-width:500px;margin:auto;display:none;" id="loginForm">
+  <h2 class="animated jello">Login</h2>
+  <img src="https://www.pywe.org/static/images/logo.png" />
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+  </div>
+
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="psw">
+  </div>
+
+  <button type="submit" class="btn">Login</button>
+  <div id="attach" style="max-width:100%;margin:auto"></div>
+</form>
+<div class="footer">
+  <p>2019 PywE</p>
+</div>
+<!-- You can put this script in a file and call it here -->
+<!-- When putting in a file do not include the <script></script> tags -->
+<script>
+  document.querySelector('#loginbtn').onclick = function(e) {
+  document.querySelector('#loginbtn').className = "active animated pulse";
+  document.querySelector('#registerbtn').className = "mybtn";
+  signupform = document.querySelector('#signupForm');
+  loginform = document.querySelector('#loginForm');
+  signupform.className = "animated bounceOutRight";
+  loginform.className = "animated bounceInLeft";
+  setTimeout(() => {
+    loginform.style.display = "block";
+    signupform.style.display = "none";
+  }, 500);
+  }
+  
+  document.querySelector('#registerbtn').onclick = function(e) {
+  document.querySelector('#registerbtn').className = "active animated pulse";
+  document.querySelector('#loginbtn').className = "mybtn";
+  signupform = document.querySelector('#signupForm');
+  loginform = document.querySelector('#loginForm');
+  loginform.className = "animated bounceOutRight"
+  signupform.className = "animated bounceInLeft"
+  setTimeout(() => {
+    signupform.style.display = "block";
+     loginform.style.display = "none";
+  }, 500);
+  }
+  </script>
+</body>
+</html>
