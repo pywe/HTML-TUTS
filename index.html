@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta charset="utf-8">
+        <link href='forms.css' rel='stylesheet'/>
+    </head>
+    <body>
+        <form id='progForm' method="dialog"  action='#'>
+            <h1>PyWE</h1>
+            <div class='slide'>
+                <p><input placeholder="What's your name?" oninput="this.className = ''"></p>
+            </div>
+            <div class='slide'>
+                <p><input placeholder="What's your language?" oninput="this.className = ''"></p>                   
+            </div>
+            <div class='slide'>
+                <p><input placeholder="Want help?" oninput="this.className = ''"></p>
+            </div>
+            <div class='slide'>
+                <p style='color: white; font-size: 15px; text-align: center;'>Please wait for your reply</p>
+            </div>
+            <div style='overflow: auto'>
+                <div style='float: right'>
+                    <button id=prevBtn onclick='slideMove(-1)'>Previous</button>
+                    <button id=nextBtn onclick='slideMove(1)'>Next</button>
+                </div>
+            </div>
+            <div id='tabs'>
+                <span class='ind'></span>
+                <span class='ind'></span>
+                <span class='ind'></span>
+            </div>
+        </form>
+        <script src='forms.js'></script>
+    </body>
+</html>

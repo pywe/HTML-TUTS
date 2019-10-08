@@ -137,19 +137,19 @@ const http = new XMLHttpRequest();
               var color = "container"
               var right;
               var avatar_alt = "You";
-              var msg_align =' class="left"';
+              var msg_align ='left';
             }
             else {
               var pos = "time-left";
               var color = "container darker";
               var right = ' class="right"';
               var avatar_alt = user['username'];
-              var msg_align = ' class="right"'
+              var msg_align ='right'
             }
             var avatar = user['avatar']
-            return `<div class="`+color+`">
+            return `<div class="`+color+` `+msg_align+`">
                   <img src="`+avatar+`" alt="`+avatar_alt+`"`+right+` style="width:100%;">
-                  <p`+msg_align+`>`+msg+`</p>
+                  <p class="`+msg_align+`">`+msg+`</p>
                   <span class="`+pos+`">`+time+`</span>
                   </div>`
           }
@@ -192,14 +192,14 @@ function message(){
               }
                 if (i === 0){
                 day = msgs[i]['day'];
-                msgbox.innerHTML += `<p style="text-align:center;float:center;">- - - - - - - - - `+day+` - - - - - - - - -</p>`
+                msgbox.innerHTML += `<div class="datecontainer mycenter" style="text-align:center;"> - - - - - - `+day+` - - - - - - - </div>`
               }
               else{
                   if(day === msgs[i]['day']){
 
               }else{
                   day = msgs[i]['day'];
-                  msgbox.innerHTML += `<p style="text-align:center;float:center;">- - - - - - - - - `+day+` - - - - - - - - -</p>`
+                  msgbox.innerHTML += `<div class="datecontainer mycenter" style="text-align:center;"> - - - - - - `+day+` - - - - - - - </div>`
               }
 
               }
@@ -212,10 +212,6 @@ function message(){
           //      msgbox.innerHTML += "<p>No Messages</p>"
           //   }
             var typing = document.getElementById("typing").style.display = "block";
-//              document.querySelector("#chatbox").innerHTML += `<div id="typing" style="bottom:0">
-//     <textarea id="msg" placeholder="Your Message Here"></textarea>
-//     <button id="submit" class="btn success">Send</button>
-// </div>`
 
             // window.scrollTo(0,document.querySelector("#chatcontainer").scrollHeight);
             // window.scrollTo(0,document.body.scrollHeight);

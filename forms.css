@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    background: repeating-linear-gradient(purple,yellow,purple);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+    font-weight: bolder;
+    color: purple;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: -2px 2px 0 yellow, 2px -2px 0 yellow, 2px 2px 0 yellow, -2px -2px 0 yellow;
+}
+
+body{
+    height: auto;
+    width: auto;
+}
+
+#progForm{
+    margin: 100px auto;
+    padding: 40px;
+    width: 60%;
+    min-width: 250px;
+    background-color: darkslategray;
+}
+
+input{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input.invalid{
+    background-color: crimson;
+}
+
+.slide{
+    display: none;
+}
+
+button{
+    font-size: 15px;
+    margin: 20px 0 0 0;
+    background-color: green;
+    color: white;
+    border: 1px solid white;
+    border-radius: 45%;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+#prevBtn{
+    background-color: grey;
+}
+
+#tabs{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.ind{
+    height: 10px;
+    width: 10px;
+    background-color: crimson;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    opacity: 0.5;
+}
+
+.ind.active{
+    opacity: 1;
+}
+
+.ind.finish{
+    background-color: green;
+}

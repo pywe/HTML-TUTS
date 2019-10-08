@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="description" content="I use Qpython which is a great Python programming app that you can use ">
+	<meta name="keywords" content="I use Qpython which is a great Python programming app that you can use ">
+	<meta name="author" content="Charles Otongclips">
+	<title>ATM Web Design / Services</title>
+	<!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Create four equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 24%;
+          padding: 10px;
+          margin:5px;
+          height: 300px; /* Should be removed. Only for demonstration */
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        text-align: center;
+        background-color: #f1f1f1;
+        }
+
+        .column img{
+            height:200px;
+            width: 100%;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+          }
+        }
+        footer{
+            bottom:0;
+            position:fixed;
+            width: 100%;
+            
+        }
+        footer p{
+            text-align: center;
+            margin:auto;
+            color: blueviolet;
+            background-color: #f1f1f1;
+        }
+        </style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="logo">
+                <img src="img/logo2.png.jpg">
+            </div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="services.html">Services</a></li>
+                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+    <main>
+	<section id="newsletter">
+		<div class="container">
+			<h1>Subscribe To Our Newsletter</h1>
+			<form>
+				<input type="email" placeholder="Enter Email...">
+				<button type="submit" class="button_1">Subscribe	
+				</button>
+			</form>
+		</div>
+	</section> 
+        <section id="gallery">
+        <div class="row">
+          <div class="column">
+            <h2>Title</h2>
+              <img src="/home/theoelia/Desktop/DeepinScreenshot_20190822222734.png">
+            <p>Some text..</p>
+          </div>
+          <div class="column">
+            <h2>Column 2</h2>
+              <img src="/home/theoelia/Desktop/DeepinScreenshot_20190829231720.png">
+            <p>Some text..</p>
+          </div>
+          <div class="column">
+            <h2>Column 3</h2>
+              <img src="/home/theoelia/Desktop/DeepinScreenshot_20190822222734.png">
+            <p>Some text..</p>
+          </div>
+          <div class="column">
+            <h2>Column 4</h2>
+              <img src="/home/theoelia/Desktop/DeepinScreenshot_20190829231720.png">
+            <p>Some text..</p>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+              <h2>Title</h2>
+                <img src="/home/theoelia/Desktop/DeepinScreenshot_20190822222734.png">
+              <p>Some text..</p>
+            </div>
+            <div class="column">
+              <h2>Column 2</h2>
+                <img src="/home/theoelia/Desktop/DeepinScreenshot_20190829231720.png">
+              <p>Some text..</p>
+            </div>
+            <div class="column">
+              <h2>Column 3</h2>
+                <img src="/home/theoelia/Desktop/DeepinScreenshot_20190822222734.png">
+              <p>Some text..</p>
+            </div>
+            <div class="column">
+              <h2>Column 4</h2>
+                <img src="/home/theoelia/Desktop/DeepinScreenshot_20190829231720.png">
+              <p>Some text..</p>
+            </div>
+          </div>
+    </section>
+</main>
+<footer>
+    <p>ATM somthing copyright </p>
+</footer> 
+</body>
+</html>

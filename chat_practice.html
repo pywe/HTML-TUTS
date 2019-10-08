@@ -7,13 +7,24 @@
 <title>PywE|Chat {{otheruser}}</title>
 <link rel="icon" type="image/png" href="https://www.pywe.org/static/images/logo.png">
 <link rel="stylesheet" href="css/livechat.css" type="text/css" >
+<style>
+              .divtext {
+                    border: ridge 2px;
+                    padding: 5px;
+                    width: 20em;
+                    min-height: 2em;
+                    max-height: 10em;
+                    overflow: auto;
+                    margin: auto;
+                    
+                }
+                </style>
 </head>
 <body>
     <div class="split sleft">
-        <h2 class='titulo'>Your Chats</h2>
-      <div id="friendsList" class="listview">        
-      </div>
-      </div>
+      <h2 class='titulo'>Your Chats</h2>
+      <div id="friendsList" class="listview"></div>
+    </div>
       
       <!-- <div id="chatcontainer"> -->
       <div class="rsplit sright" id="chatinbox">
@@ -21,11 +32,14 @@
             <div class="image-container">
                 <div id="status" style="color:white;"></div>
                 <div id="head" class="text"></div>
+                <img src="/home/theoelia/Downloads/cyan-car.jpg" class="avatar"/>
             </div>
               <div id="chatbox">
               <div id="msgbox"></div>
               <div id="typing" style="display: none;text-align: center;">
-                  <textarea id="msg" placeholder="Your Message Here"></textarea>         
+                  <textarea id="msg" placeholder="Your Message Here"></textarea>  
+                
+                <div class="divtext" contentEditable>Hello World</div>       
                       <button id="submit" class="btn success">Send</button>   
               </div>
               </div>
@@ -40,7 +54,7 @@
   window.apikey = "faa66b4640ed7482fc21007016db22174fe6d26dd0a0af33d7761af49a5b"
 //   console.log(apikey)
   window.thisuser = {username:'Ellie',avatar:''}
-  window.otheruser={username:'Josefina',avatar:''};
+  window.otheruser=otherusers[0]
   //  = {username:"{{otheruser.username}}",avatar:"{{otheruser.user_img.url}}"}
   window.msgbox = document.getElementById("msgbox");
   window.ids =[];
@@ -55,7 +69,7 @@
   let myobj = {username,avatar}
     // console.log()
   window.otheruser = myobj;
-  console.log(window.otheruser);
+  // console.log(window.otheruser);
   message()
 }
 };

@@ -1,0 +1,74 @@
+<style>
+  .speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
+  .speech input {border: 0; width: 240px; display: inline-block; height: 30px;}
+  .speech img {float: right; width: 40px }
+</style>
+
+<!-- Search Form -->
+<form id="labnol" method="get" action="https://www.google.com/search">
+  <div class="speech">
+    <input type="text" name="q" id="transcript" placeholder="Speak" />
+    <img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif" />
+  </div>
+</form>
+
+<!-- HTML5 Speech Recognition API -->
+<script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('transcript').value = e.results[0][0].transcript;
+        recognition.stop();
+        document.getElementById('labnol').submit();
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+
+//   Notification.requestPermission(notifyMe);
+notifyMe();
+  function notifyMe() {
+  // Let's check if the browser supports notifications
+  if (!("Notification" in window)) {
+    alert("This browser does not support system notifications");
+    // This is not how you would really do things if they aren't supported. :)
+  }
+
+  // Let's check whether notification permissions have already been granted
+  else if (Notification.permission === "granted") {
+    // If it's okay let's create a notification
+    var notification = new Notification("Hi there!");
+    console.log("Thank You")
+  }
+
+  // Otherwise, we need to ask the user for permission
+  else if (Notification.permission !== 'denied') {
+    Notification.requestPermission(function (permission) {
+      // If the user accepts, let's create a notification
+      if (permission === "granted") {
+        console.log("Thank You")
+        var notification = new Notification("Hi there!");
+      }else{
+        console.log("Oucchhh")
+      }
+    });
+  }
+ 
+  // Finally, if the user has denied notifications and you 
+  // want to be respectful there is no need to bother them any more.
+}
+</script>
